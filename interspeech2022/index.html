@@ -1,0 +1,204 @@
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>INTERSPEECH2022 JETS</title>
+    </head>
+
+    <body>
+
+    <h1>"JETS: Jointly training FastSpeech2 and HiFi-GAN for end-to-end text-to-speech"</h1> 
+
+    <p>Submitted to <a href="https://interspeech2022.org/">INTERSPEECH2022</a>.</p>
+
+    <h2>Authors</h2>
+    <ul>
+    <li>Dan Lim (Kakao Enterprise Corp)</li>
+    <li>JungSung Hee (Kakao Enterprise Corp)</li>
+    <li>Eesung Kim (Kakao Enterprise Corp)</li>
+    </ul>
+    <h2>Abstract</h2>
+    <p>
+    In neural text-to-speech (TTS), two-stage system or a cascade of separately learned models have shown synthesis quality close to human speech. For example, FastSpeech2 transforms an input text to a mel spectrogram and then HiFi-GAN generates a raw waveform from a mel spectogram where they are called an acoustic feature generator and a neural vocoder respectively. However their training pipeline is somewhat cumbersome in that it requires a fine-tuning and an accurate speech-text alignment for optimal performance. In this work, we present end-to-end text-to-speech (E2E-TTS) model which has simplified training pipeline and outperforms a cascade of separately learned models. Specifically, our proposed model is jointly trained FastSpeech2 and HiFi-GAN with an alignment module. Since there are no acoustic feature mismatch between training and inference, it does not requires fine-tuning. Furthermore we remove dependency on an external speech-text alignment tool by adopting an alignment learning objective in our joint training framework. Experiments on LJSpeech corpus shows that proposed model outperforms publicly available, state of the art implementations of ESPNet2-TTS on subjective evaluation (MOS) and some of objective evaluations.
+    </p>
+
+    <h2>Example of LJSpeech (English single speaker</h2>
+    <li><strong>CF2 (joint-ft)</strong>: Conformer-based FastSpeech2 + HiFi-GAN, both models were jointly fine-tuned.</li>
+    <li><strong>CF2 (joint-tr)</strong>: Conformer-based FastSpeech2 + HiFi-GAN, both models were jointly trained from the scratch.</li>
+    <li><strong>VITS</strong>: End-to-end text-to-waveform model, VITS.</li>
+    <li><strong>JETS</strong>: End-to-end text-to-waveform model, JETS (proposed model).</li>
+
+    <p><strong>LJ050-0030</strong>: The Commission also recommends</p>
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Groudtruth</strong></td>
+    <td><strong>CF2 (joint-ft)</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_gt/LJ050-0030.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_joint_ft/LJ050-0030.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>CF2 (joint-tr)</strong></td>
+    <td><strong>VITS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_joint_tr/LJ050-0030.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_vits/LJ050-0030.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>JETS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_jets/LJ050-0030.wav"/></audio></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p><strong>LJ050-0040</strong>: and reports from other agencies which independently evaluate their information for potential sources of danger.</p>
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Groudtruth</strong></td>
+    <td><strong>CF2 (joint-ft)</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_gt/LJ050-0040.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_joint_ft/LJ050-0040.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>CF2 (joint-tr)</strong></td>
+    <td><strong>VITS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_joint_tr/LJ050-0040.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_vits/LJ050-0040.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>JETS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_jets/LJ050-0040.wav"/></audio></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p><strong>LJ050-0050</strong>: As a result of these studies, the planning document submitted by the Secretary of the Treasury to the Bureau of the Budget on August thirty-one,</p>
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Groudtruth</strong></td>
+    <td><strong>CF2 (joint-ft)</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_gt/LJ050-0050.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_joint_ft/LJ050-0050.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>CF2 (joint-tr)</strong></td>
+    <td><strong>VITS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_joint_tr/LJ050-0050.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_vits/LJ050-0050.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>JETS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_jets/LJ050-0050.wav"/></audio></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p><strong>LJ050-0152</strong>: The Secret Service and the Department of the Treasury now recognize this critical need.</p>
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Groudtruth</strong></td>
+    <td><strong>CF2 (joint-ft)</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_gt/LJ050-0152.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_joint_ft/LJ050-0152.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>CF2 (joint-tr)</strong></td>
+    <td><strong>VITS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_joint_tr/LJ050-0152.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_vits/LJ050-0152.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>JETS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_jets/LJ050-0152.wav"/></audio></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p><strong>LJ050-0200</strong>: The Secret Service should utilize the personnel of other Federal law enforcement offices</p>
+    <table>
+    <thead>
+    <tr>
+    <th></th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Groudtruth</strong></td>
+    <td><strong>CF2 (joint-ft)</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_gt/LJ050-0200.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_joint_ft/LJ050-0200.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>CF2 (joint-tr)</strong></td>
+    <td><strong>VITS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_joint_tr/LJ050-0200.wav"/></audio></td>
+    <td><audio controls="" ><source src="wavs/lj_vits/LJ050-0200.wav"/></audio></td>
+    </tr>
+    <tr>
+    <td><strong>JETS</strong></td>
+    </tr>
+    <tr>
+    <td><audio controls="" ><source src="wavs/lj_jets/LJ050-0200.wav"/></audio></td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    </body>
+</html>
